@@ -1,2 +1,0 @@
-# svetoslavovbg
-Personal website
