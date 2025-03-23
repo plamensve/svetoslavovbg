@@ -17,17 +17,35 @@ html {
     scroll-behavior: smooth;
 }
 
+.top-lane-contact {
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    background-color: #F2EFE5;
+    padding: 0.5em 1.5em;
+}
+
+.tl-info{
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 30px 0;
+}
+
+.nav-container {
+
 }
 
 /* Header */
 .main-header {
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: linear-gradient(to right, #3a7a7b, #2b4d4e);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -35,13 +53,14 @@ html {
 
 .nav-container {
     display: flex;
+    flex-direction: column;
+    gap: 1em;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
+    padding-top: 1em;
 }
 
 .logo {
-    width: 140px;
+    width: 160px;
 }
 
 .main-nav ul {
@@ -52,7 +71,7 @@ html {
 
 .main-nav a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: #ffffff;
     font-weight: 600;
     position: relative;
 }
@@ -62,7 +81,7 @@ html {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #3a7a7b;
+    background: #ffffff;
     left: 0;
     bottom: -4px;
     transition: 0.3s;
@@ -73,22 +92,70 @@ html {
 }
 
 /* Hero Section */
-.hero-section {
-    background: linear-gradient(to right, #3a7a7b, #2b4d4e);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+
+.hero-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
+
+.hc {
+    position: relative; /* нужно за позициониране на балончето вътре */
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.hero-section {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 1em;
+}
+
+
 
 .hero-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    line-height: 1em;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
+
+.contact-info {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* под иконката */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3a7a7b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+/* Стрелка към иконката */
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #3a7a7b transparent;
+}
+
 
 .btn-primary {
     display: inline-block;

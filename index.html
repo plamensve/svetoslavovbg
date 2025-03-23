@@ -8,13 +8,24 @@
 </head>
 <body>
 <header class="main-header">
+    <div class="top-lane-contact">
+        <div class="tl-info">
+            <img src="recources/images/tn-person.png" alt="person-photo" style="width: 30px">
+            <p>Plamen Svetoslavov</p>
+        </div>
+        <div class="tl-info">
+            <img src="recources/images/tn-email.png" alt="person-photo" style="width: 32px">
+            <p>p.krustev@gtapetroleum.com</p>
+        </div>
+    </div>
     <div class="container nav-container">
         <img src="recources/images/logo.gif" alt="logo" class="logo">
         <nav class="main-nav">
             <ul>
-                <li><a href="#about">За нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#contact">Контакти</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#gta">About GTA Petroleum</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Services</a></li>
             </ul>
         </nav>
     </div>
@@ -23,13 +34,36 @@
 <main>
     <section class="hero-section">
         <div class="container">
-            <h1>Горива на едро и бункероване по р. Дунав</h1>
-            <p>Надежден партньор за вашия бизнес</p>
-            <a href="#contact" class="btn-primary">Свържи се с нас</a>
+            <div class="hero-text">
+                <h1>Wholesale fuels and bunkering</h1>
+                <h1 style="color: #366465">along the Danube River</h1>
+                <p style="color: #366465; font-weight: bold">A reliable partner for your business</p>
+                <p class="click" style="margin-bottom: -20px">Click</p>
+            </div>
+            <div class="hero-contacts">
+                <div class="hc" onclick="toggleContact('email')">
+                    <img src="recources/images/tn-phone.png" alt="email" style="width: 60px">
+                    <p id="email" class="contact-info" style="font-size: 20px">(+359) 88 3 427 273</p>
+                </div>
+                <div class="hc" onclick="toggleContact('whatsapp')">
+                    <img src="recources/images/tp-whatsapp.gif" alt="whatsapp" style="width: 60px">
+                    <p id="whatsapp" class="contact-info" style="font-size: 20px">(+359) 88 3 427 273</p>
+                </div>
+                <div class="hc" onclick="toggleContact('viber')">
+                    <img src="recources/images/tn-viber.png" alt="viber" style="width: 48px">
+                    <p id="viber" class="contact-info" style="font-size: 20px">(+359) 88 3 427 273</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>GTA Petroleum Ltd. предоставя агентийски услуги и търговия с горива на едро по река Дунав...</p>
+        </div>
+    </section>
+    <section id="gta" class="section">
         <div class="container">
             <h2>За нас</h2>
             <p>GTA Petroleum Ltd. предоставя агентийски услуги и търговия с горива на едро по река Дунав...</p>
@@ -71,5 +105,6 @@
 </footer>
 
 <script src="recources/js/script.js"></script>
+<script src="recources/js/toggleContacts.js"></script>
 </body>
 </html>
