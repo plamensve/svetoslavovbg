@@ -11,8 +11,6 @@ const observer = new IntersectionObserver(entries => {
             mainHeader.style.backgroundSize = "100% 200%";
             mainHeader.style.backgroundPosition = "top";
             mainHeader.style.boxShadow = "";
-
-
         } else {
             section.classList.remove('full-width');
             section.style.borderRadius = '30px';
@@ -20,7 +18,7 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, {
-    threshold: 0.59
+    threshold: 0.55
 });
 
 
