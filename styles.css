@@ -205,15 +205,31 @@ details[open] summary::before {
 }
 
 .nav-container {
+    max-width: 1800px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 1em;
+    padding: 1em 0;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin-right: 36em;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 .logo {
     width: 150px;
+    margin-right: 1em;
 }
 
 /* === Navigation === */
