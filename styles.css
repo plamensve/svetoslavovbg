@@ -183,7 +183,7 @@ details[open] summary::before {
 
 /* === Header === */
 .main-header {
-    background: linear-gradient(to right, #479698, #2b4d4e);
+    background-color: #3a7a7b; /* #3a7a7b */
     position: sticky;
     top: 0;
     z-index: 9999;
