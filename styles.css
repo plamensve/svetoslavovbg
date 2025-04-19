@@ -32,7 +32,7 @@ body {
     padding: 16px 32px;
     font-size: 16px;
     font-weight: 700;
-    color: #ffffff;
+    color: #F0F1C5;
     background: linear-gradient(145deg, #3a7a7b, #5fc1c2);
     border: none;
     border-radius: 60px;
@@ -40,7 +40,7 @@ body {
     text-transform: uppercase;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 20px rgba(63, 177, 179, 0.5), inset 0 0 10px rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(63, 177, 179, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
     z-index: 1;
 }
 
@@ -51,7 +51,7 @@ body {
     left: -75%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0.15), rgba(255,255,255,0));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     transform: skewX(-20deg);
     transition: all 0.4s ease-in-out;
     z-index: 2;
@@ -146,23 +146,79 @@ details[open] summary::before {
 
 /* === General Containers === */
 .container {
+    display: flex;
+
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 0;
 }
 
+.first-container{
+    display: flex;
+    justify-content: center;
+}
+
+.gta-logo {
+    margin: 0 auto;
+    padding-top: 3em;
+}
+
+.gta-logo img {
+    max-height: 1400px;
+    width: 100%;
+}
+
 .img-gta {
     display: flex;
-    align-items: flex-end;
-    border: 2px solid red;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2em;
 }
 
 .img-gta img {
+    max-width: 800px;
     width: 50%;
     margin: 10px 50px; /* вместо auto */
     height: auto;
     border-radius: 20px;
+}
+
+.gta-text {
+    margin-top: 0.5em;
+    background-color: #F0F1C5;
+    padding: 2em;
+    border-radius: 20px;
+    align-items: stretch;
+    max-width: 47ch;
+    height: calc(100% - 0.1em);
+    border: 1px solid #3a7a7b;
+    box-shadow: inset 0 0 0 2px #3a7a7b;
+}
+
+.gta-text h3{
+    font-weight: bold;
+    color: #3a7a7b;
+    padding-bottom: 1em;
+}
+
+.gta-text p {
+    margin-bottom: 1em;
+}
+
+.gta-text-2 {
+    margin-top: 0.5em;
+    max-width: 30ch;
+    background-color: #3a7a7b;
+    padding: 2em;
+    border-radius: 20px;
+    border: solid 1px #F0F1C5;
+    box-shadow: inset 0 0 0 2px #F0F1C5;
+}
+
+.gta-text-2{
+    color: #F0F1C5;
 }
 
 .container-1 {
@@ -178,7 +234,7 @@ details[open] summary::before {
     padding: 0 15em;
     display: flex;
     flex-direction: column;
-    margin-top: 6em;
+    margin-top: 2em;
 }
 
 /* === Header === */
@@ -196,12 +252,15 @@ details[open] summary::before {
     gap: 1em;
     background-color: #F2EFE5;
     padding: 0.5em 1.5em;
+    justify-content: space-between;
 }
 
 .tl-info {
     display: flex;
     align-items: center;
     gap: 0.1em;
+    color: #3a7a7b;
+    font-weight: bold;
 }
 
 .nav-container {
@@ -241,7 +300,7 @@ details[open] summary::before {
 
 .main-nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #F0F1C5;
     font-weight: 600;
     position: relative;
     font-size: 1.2em;
@@ -252,7 +311,7 @@ details[open] summary::before {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #ffffff;
+    background: #F0F1C5;
     left: 0;
     bottom: -4px;
     transition: 0.3s;
@@ -280,11 +339,13 @@ details[open] summary::before {
     font-size: 3.5rem;
     margin-bottom: 20px;
     line-height: 1em;
+    cursor: pointer;
 }
 
 .hero-section p {
     font-size: 1.7rem;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 /* === About Me Section === */
@@ -294,7 +355,7 @@ details[open] summary::before {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border: 4px solid #ffffff;
+    border: 4px solid #F0F1C5;
     object-fit: cover;
     margin-bottom: 35px;
     cursor: pointer;
@@ -342,7 +403,7 @@ h2 {
 
 .hero-11 {
     width: 75%;
-    border: 2px solid #ffffff;
+    border: 2px solid #F0F1C5;
     border-radius: 15px;
     padding: 1em;
     margin-top: 35px;
@@ -351,7 +412,7 @@ h2 {
 }
 
 .hero-11 h3 {
-    color: white;
+    color: #F0F1C5;
     text-transform: uppercase;
 }
 
@@ -362,7 +423,7 @@ h2 {
 }
 
 .hero-11 p {
-    color: white;
+    color: #F0F1C5;
     margin-top: 10px;
     font-style: italic;
     line-height: 1.2;
@@ -370,62 +431,88 @@ h2 {
 
 .hero-11 ul {
     text-transform: uppercase;
-    color: white;
+    color: #F0F1C5;
 }
 
 .hero-11 li {
     list-style: none;
-    color: white;
+    color: #F0F1C5;
 }
 
 /* === Container 2 Details === */
 .container-2 h2 {
-    color: white;
+    color: #F0F1C5;
     text-align: center;
     margin-top: 1em;
 }
 
 .c2 {
     display: flex;
-    justify-content: space-between;
-    gap: 5em;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.c2 figure {
+    max-width: 600px;
+    width: 100%;
+    background: #F0F1C5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.c2 figure img {
+    width: 100%;
+    max-height: 300px;
+    height: auto;
+    display: block;
+}
+
+.c2 figcaption {
+    padding: 16px;
+    text-align: left;
+}
+
+.c2 figcaption h3 {
+    margin-bottom: 10px;
+    color: #3a7a7b;
+}
+
+.c2 figcaption p,
+.c2 figcaption ul {
+    margin: 6px 0;
+    font-size: 14px;
+    list-style: none;
+}
+
+.c2 figcaption span {
+    font-weight: bold;
 }
 
 .c-1,
 .c-2 {
-    flex: 50%;
-    color: white;
-    border: 2px solid white;
-    padding: 1em;
-    border-radius: 15px;
-    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 3s;
 }
 
-.c-1 h3,
-.c-2 h3 {
-    padding-bottom: 0.8em;
-    color: #3a7a7b;
-    font-weight: bold;
+/* Когато елементите са видими */
+.c-1.visible,
+.c-2.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 2s ease-in-out;
 }
 
-.c-1 p,
-.c-2 p {
-    line-height: 2;
-}
 
-.c-1 p span,
-.c-2 p span {
-    color: #3a7a7b;
-    font-weight: bold;
-}
-
-.c-2 ul li {
-    margin-left: 30px;
-}
 
 /* === First Section === */
 .first-section {
-    background: linear-gradient(360deg, #0d0d0d 0%, #3a7a7b 65%);
+    background: linear-gradient(360deg, #3a7a7b 0%, #3a7a7b 55%);
     background-size: cover;
     width: 95%;
     margin-left: 50px;
@@ -644,6 +731,7 @@ footer {
     .main-nav ul li {
         width: 100%;
     }
+
 }
 
 /* === Section overrides === */
@@ -651,3 +739,183 @@ footer {
 .bg-light {
     background-color: transparent;
 }
+
+.left-top-lane {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-left: 3em;
+}
+
+.right-top-lane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5em;
+}
+
+.right-top-lane a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.right-top-lane img {
+    display: block;
+}
+
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(240, 241, 197) 0%, rgb(240, 241, 197) 100%);
+    animation: floatUpDown 10s infinite ease-in-out;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Анимация за пукане при посочване */
+.shape:hover {
+    animation: none;
+    transform: scale(1.5) rotate(360deg);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Разпределение и видимост */
+.shape:nth-child(1) {
+    width: 130px;
+    height: 130px;
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.shape:nth-child(2) {
+    width: 90px;
+    height: 90px;
+    top: 25%;
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.shape:nth-child(3) {
+    width: 110px;
+    height: 110px;
+    top: 5%;
+    left: 75%;
+    animation-delay: 4s;
+}
+
+.shape:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.shape:nth-child(5) {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 50%;
+    animation-delay: 3s;
+}
+
+.shape:nth-child(6) {
+    width: 60px;
+    height: 60px;
+    top: 30%;
+    left: 85%;
+    animation-delay: 5s;
+}
+
+.shape:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    top: 75%;
+    left: 10%;
+    animation-delay: 0.5s;
+}
+
+.shape:nth-child(8) {
+    width: 70px;
+    height: 70px;
+    top: 85%;
+    left: 65%;
+    animation-delay: 2.5s;
+}
+
+.shape:nth-child(9) {
+    width: 120px;
+    height: 120px;
+    top: 55%;
+    left: 80%;
+    animation-delay: 3.5s;
+}
+
+.shape:nth-child(10) {
+    width: 140px;
+    height: 140px;
+    top: 90%;
+    left: 40%;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-80px) scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.gta-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-items {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.photo-gallery{
+   max-width:1500px;
+    width: 100%;
+}
+
+
+
