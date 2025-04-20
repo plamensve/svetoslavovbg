@@ -23,6 +23,10 @@ body {
     line-height: 1.6;
 }
 
+.container-1 img:nth-child(1){
+    display: none;
+}
+
 .hamburger {
     display: none;
     font-size: 30px;
