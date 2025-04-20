@@ -23,6 +23,14 @@ body {
     line-height: 1.6;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* === Buttons === */
 .btn-download-fancy {
     position: relative;
@@ -272,7 +280,15 @@ details[open] summary::before {
     padding: 1em 0;
 }
 
-.main-nav ul {
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 2em;
+    list-style: none;
+}
+
+.nav-links ul {
     display: flex;
     gap: 2em;
     list-style: none;
@@ -280,7 +296,7 @@ details[open] summary::before {
     margin-right: 36em;
 }
 
-.main-nav a {
+.nav-links a {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -292,13 +308,13 @@ details[open] summary::before {
 }
 
 /* === Navigation === */
-.main-nav ul {
+.nav-links ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
-.main-nav a {
+.nav-links a {
     text-decoration: none;
     color: #F0F1C5;
     font-weight: 600;
@@ -306,10 +322,10 @@ details[open] summary::before {
     font-size: 1.2em;
 }
 
-.main-nav a::after {
+.nav-links a::after {
     content: "";
     position: absolute;
-    width: 0%;
+    width: 0;
     height: 2px;
     background: #F0F1C5;
     left: 0;
@@ -317,7 +333,7 @@ details[open] summary::before {
     transition: 0.3s;
 }
 
-.main-nav a:hover::after {
+.nav-links a:hover::after {
     width: 100%;
 }
 
@@ -399,6 +415,10 @@ h2 {
     width: 30%;
     border-radius: 15px;
     text-align: center;
+}
+
+.hero-1 img:nth-child(3){
+    display: none;
 }
 
 .hero-11 {
@@ -534,6 +554,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    flex-wrap: wrap;
 }
 
 .grid-1,
@@ -653,38 +674,54 @@ h2 {
     border-style: solid;
     border-color: transparent #3a7a7b transparent transparent;
 }
-
-/* === Gallery === */
+/* === Modern Gallery Grid === */
 .photo-gallery {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 40px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scroll-behavior: smooth;
+    padding: 20px 0;
+    width: 100%;
 }
 
 .gallery-item {
-    flex: 0 0 auto;
     position: relative;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
 }
 
 .gallery-item img {
-    max-height: 300px;
-    height: auto;
-    display: block;
-    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
     transition: transform 0.4s ease;
+    display: block;
+    border-radius: 20px;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.03);
-    cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(0.9);
 }
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(58, 122, 123, 0.2), rgba(95, 193, 194, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
 
 .overlay {
     position: absolute;
@@ -917,5 +954,79 @@ footer {
     width: 100%;
 }
 
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #3a7a7b;
+    color: #f0f1c5;
+    padding: 40px 0 20px;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 130px;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 2em;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #F0F1C5;
+    position: relative;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #f0f1c5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #5fc1c2;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.social-links a img {
+    width: 28px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
 
 

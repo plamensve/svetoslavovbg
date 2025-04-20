@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTA Petroleum - Wholesale fuels and bunkering</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 <header class="main-header">
@@ -34,16 +35,23 @@
 
     <div class="container nav-container">
         <img src="recources/images/logo.gif" alt="logo" class="logo">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#gta">About GTA Petroleum</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-            </ul>
-        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#gta">About GTA Petroleum</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
     </div>
+
+
 </header>
 
 <main>
@@ -86,6 +94,8 @@
             <div class="hero-1">
                 <h2 style="color: #f0f4f4; text-decoration: underline"></h2>
                 <img src="recources/images/my-photo.jpg" alt="photo-plamen-svetoslavov-gtapetroleum"
+                     class="about-me-photo">
+                <img src="recources/images/gallery/3.jpg" alt="photo-plamen-svetoslavov-gtapetroleum"
                      class="about-me-photo">
             </div>
             <div class="hero-11">
@@ -252,15 +262,49 @@
 
 </main>
 
-<footer>
-    <div class="container">
+<footer class="site-footer">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <img src="recources/images/logo.gif" alt="GTA Petroleum Logo" class="footer-logo">
+            <p>Wholesale fuels and bunkering along the Danube River.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (+359) 883 427 273</p>
+            <p><strong>Email:</strong> p.krustev@gtapetroleum.com</p>
+            <p><strong>Address:</strong> Ruse, Bulgaria</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#gta">About GTA</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Social Networks</h4>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/plamen-svetoslavov/" target="_blank"><img
+                        src="recources/images/social/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/359XXXXXXXXX" target="_blank"><img src="recources/images/social/whatsapp.png"
+                                                                          alt="WhatsApp"></a>
+                <a href="viber://chat?number=359XXXXXXXXX"><img src="recources/images/social/tn-viber.png" alt="Viber"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
         <p>&copy; 2025 GTA Petroleum Ltd. Всички права запазени.</p>
     </div>
 </footer>
+
 
 <script src="recources/js/script.js"></script>
 <script src="recources/js/toggleContacts.js"></script>
 <script src="recources/js/full-width.js"></script>
 <script src="recources/js/c1c2.js"></script>
+<script src="recources/js/sand-menu.js"></script>
 </body>
 </html>
