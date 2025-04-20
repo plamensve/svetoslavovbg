@@ -225,7 +225,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        margin: 0 auto;
+        margin: -15px auto;
         position: relative;
     }
 
