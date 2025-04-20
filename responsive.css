@@ -179,16 +179,6 @@
 }
 
 @media (max-width: 800px) {
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        z-index: 100;
-        position: relative;
-    }
 
     .hamburger span {
         display: block;
@@ -202,6 +192,7 @@
     /* Анимация при клик */
     .hamburger.active span:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
+        margin-top: 0.5em;
     }
 
     .hamburger.active span:nth-child(2) {
@@ -277,16 +268,16 @@
     .active {
         display: flex;
         flex-direction: column;
-        margin-top: 0.5em;
-        padding: 0.5em;
+        margin-bottom: 2em;
+    }
+
+    .active a {
+        margin-bottom: 1em;
     }
 
     .active li {
-        border: 1px solid #F0F1C5;
-        padding: 0.5em;
-        border-radius: 10px;
+        margin-top: -20px;
     }
-
 
     .container-2 {
         padding: 0 2em;
