@@ -301,7 +301,7 @@
     .container-1 img:nth-child(1) {
         display: flex;
         width: 250px;
-        margin-top: -60px;
+        margin-top: -30px;
         margin-bottom: -30px;
     }
 
@@ -393,6 +393,10 @@
 @media (max-width: 400px) {
     .container-1 img:nth-child(1){
         margin: 0 auto;
+    }
+
+    .first-section {
+        margin-left: 12px;
     }
 }
 
