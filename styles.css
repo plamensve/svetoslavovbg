@@ -23,7 +23,7 @@ body {
     line-height: 1.6;
 }
 
-.container-1 img:nth-child(1){
+.container-1 img:nth-child(1) {
     display: none;
 }
 
@@ -167,7 +167,7 @@ details[open] summary::before {
     padding: 30px 0;
 }
 
-.first-container{
+.first-container {
     display: flex;
     justify-content: center;
 }
@@ -209,7 +209,7 @@ details[open] summary::before {
     box-shadow: inset 0 0 0 2px #3a7a7b;
 }
 
-.gta-text h3{
+.gta-text h3 {
     font-weight: bold;
     color: #3a7a7b;
     padding-bottom: 1em;
@@ -229,11 +229,12 @@ details[open] summary::before {
     box-shadow: inset 0 0 0 2px #F0F1C5;
 }
 
-.gta-text-2{
+.gta-text-2 {
     color: #F0F1C5;
 }
 
 .container-1 {
+    max-width: 1500px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -297,7 +298,6 @@ details[open] summary::before {
     gap: 2em;
     list-style: none;
     padding: 0;
-    margin-right: 36em;
 }
 
 .nav-links a {
@@ -421,7 +421,7 @@ h2 {
     text-align: center;
 }
 
-.hero-1 img:nth-child(3){
+.hero-1 img:nth-child(3) {
     display: none;
 }
 
@@ -531,7 +531,6 @@ h2 {
     pointer-events: auto;
     transition: opacity 2s ease-in-out;
 }
-
 
 
 /* === First Section === */
@@ -678,6 +677,7 @@ h2 {
     border-style: solid;
     border-color: transparent #3a7a7b transparent transparent;
 }
+
 /* === Modern Gallery Grid === */
 .photo-gallery {
     display: grid;
@@ -953,8 +953,8 @@ footer {
 
 }
 
-.photo-gallery{
-   max-width:1500px;
+.photo-gallery {
+    max-width: 1500px;
     width: 100%;
 }
 
