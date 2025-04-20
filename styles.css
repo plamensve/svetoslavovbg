@@ -234,11 +234,11 @@ details[open] summary::before {
 }
 
 .container-1 {
-    max-width: 1500px;
-    width: 100%;
+    padding-right: 2em;
+    width: 75%;
     display: flex;
     justify-content: space-between;
-    padding: 3em 15em;
+    margin: 0 auto;
     align-items: flex-start;
     gap: 1em;
 }
@@ -419,6 +419,7 @@ h2 {
     width: 30%;
     border-radius: 15px;
     text-align: center;
+    align-items: center;
 }
 
 .hero-1 img:nth-child(3) {
