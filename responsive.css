@@ -180,22 +180,48 @@
 
 @media (max-width: 800px) {
 
+    .btn-download-fancy {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #F0F1C5;
+        background: linear-gradient(145deg, #3a7a7b, #5fc1c2);
+        border: none;
+        border-radius: 60px;
+        cursor: pointer;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 20px rgba(63, 177, 179, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+        z-index: 1;
+        margin-left: 12px;
+    }
+
     .top-scroll-button {
         position: fixed;
         bottom: 20px;
         right: 20px;
         z-index: 9999;
-        margin: 0; /* премахваш старите марджини */
-        padding: 15px 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
         background-color: #3a7a7b;
-        color: #fff;
-        border: none;
-        border-radius: 100px;
-        font-size: 24px;
-        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        opacity: 0.95;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .arrow-stack {
+        display: flex;
+        flex-direction: column;
     }
 
 
