@@ -180,6 +180,25 @@
 
 @media (max-width: 800px) {
 
+    .top-scroll-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        margin: 0; /* премахваш старите марджини */
+        padding: 15px 20px;
+        background-color: #3a7a7b;
+        color: #fff;
+        border: none;
+        border-radius: 100px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        opacity: 0.95;
+    }
+
+
     .hamburger span {
         display: block;
         width: 35px;
@@ -378,11 +397,11 @@
         gap: 1em;
         align-items: center;
     }
-    
+
 }
 
 @media (max-width: 400px) {
-    .container-1 img:nth-child(1){
+    .container-1 img:nth-child(1) {
         margin: 0 auto;
     }
 
