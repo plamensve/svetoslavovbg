@@ -280,17 +280,19 @@ details[open] summary::before {
     max-width: 1800px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1em 0;
+    padding: 0.2em 0;
+    margin-left: 5px;
 }
 
 .nav-links {
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
+    justify-content: center;
     gap: 2em;
     list-style: none;
+    font-size: 0.9rem;
 }
 
 .nav-links ul {
@@ -307,7 +309,7 @@ details[open] summary::before {
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
     margin-right: 1em;
 }
 
@@ -786,7 +788,7 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    margin-left: 3em;
+    margin-left: 1em;
 }
 
 .right-top-lane {
