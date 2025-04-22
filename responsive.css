@@ -198,7 +198,6 @@
         transition: all 0.3s ease-in-out;
         box-shadow: 0 0 20px rgba(63, 177, 179, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
         z-index: 1;
-        margin-left: 12px;
     }
 
     .top-scroll-button {

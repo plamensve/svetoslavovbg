@@ -238,24 +238,18 @@
     <section id="gallery" class="section">
         <div class="container gallery-items">
             <h2 style="color: #3a7a7b;">Gallery</h2>
-            <div class="photo-gallery">
-                <div class="gallery-item">
-                    <img src="recources/images/gallery/1.jpg" alt="gallery image 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="recources/images/gallery/2.jpg" alt="gallery image 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="recources/images/gallery/3.jpg" alt="gallery image 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="recources/images/gallery/4.jpg" alt="gallery image 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="recources/images/gallery/5.jpg" alt="gallery image 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="recources/images/gallery/6.jpg" alt="gallery image 6">
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="gallery-item"><img src="recources/images/gallery/1.jpg" alt="1"></div>
+                        <div class="gallery-item"><img src="recources/images/gallery/2.jpg" alt="2"></div>
+                        <div class="gallery-item"><img src="recources/images/gallery/3.jpg" alt="3"></div>
+                        <div class="gallery-item"><img src="recources/images/gallery/4.jpg" alt="4"></div>
+                        <div class="gallery-item"><img src="recources/images/gallery/5.jpg" alt="5"></div>
+                        <div class="gallery-item"><img src="recources/images/gallery/6.jpg" alt="6"></div>
+                    </div>
+                    <button id="prevBtn" class="carousel-btn">←</button>
+                    <button id="nextBtn" class="carousel-btn">→</button>
                 </div>
             </div>
         </div>
@@ -312,5 +306,6 @@
 <script src="recources/js/toggleContacts.js"></script>
 <script src="recources/js/c1c2.js"></script>
 <script src="recources/js/sand-menu.js"></script>
+<script src="recources/js/gallery.js"></script>
 </body>
 </html>

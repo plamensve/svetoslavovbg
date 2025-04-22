@@ -54,7 +54,6 @@ body {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 20px rgba(63, 177, 179, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
     z-index: 1;
-    margin-right: 30px;
 }
 
 .btn-download-fancy::before {
@@ -681,73 +680,69 @@ h2 {
 }
 
 /* === Modern Gallery Grid === */
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-    padding: 20px 0;
+.carousel-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
     width: 100%;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    height: 500px; /* еднаква височина за всички снимки */
     object-fit: cover;
-    transition: transform 0.4s ease;
-    display: block;
-    border-radius: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-    filter: brightness(0.9);
-}
-
-.gallery-item::after {
-    content: "";
+/* тест */
+.carousel-btn {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom right, rgba(58, 122, 123, 0.2), rgba(95, 193, 194, 0.2));
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 20px;
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-}
-
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3a7a7b;
     color: white;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.3s ease;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    z-index: 10;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
+#prevBtn {
+    left: 10px;
 }
+
+#nextBtn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: #2b5f60;
+    transform: translateY(-50%) scale(1.05);
+}
+
 
 /* === Footer === */
 footer {
