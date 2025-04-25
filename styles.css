@@ -384,7 +384,7 @@ details[open] summary::before {
 }
 
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     line-height: 1em;
     cursor: pointer;
@@ -958,6 +958,22 @@ footer {
 .hero-text {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#gta-logo-button {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.hero-text a img {
+    align-self: flex-end;
+    margin-left: auto;
+    width: 75%; /* или колкото искаш ширина за логото */
+    height: auto;
+    padding-bottom: 1em;
 }
 
 .gta-info {
