@@ -52,6 +52,20 @@
 }
 
 @media (max-width: 1400px) {
+    .hero-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    color: black;
+    text-align: center;
+    padding-right: 3em;
+    padding-left: 3em;
+    margin-bottom: 70px;
+}
 
     .first-section {
         margin-left: 40px;

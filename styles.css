@@ -167,10 +167,6 @@ details[open] summary::before {
     padding: 30px 0;
 }
 
-.first-container {
-    display: flex;
-    justify-content: center;
-}
 
 .gta-logo {
     margin: 0 auto;
@@ -347,12 +343,44 @@ details[open] summary::before {
 }
 
 .hero-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    overflow: hidden;
     background: white;
     color: black;
     text-align: center;
-    padding: 1em;
+    padding-top: 2em;
+    padding-right: 4em;
+    padding-left: 4em;
     margin-bottom: 70px;
-    margin-top: 50px;
+}
+
+.first-container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.hero-image{
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 20px;
+    object-fit: cover;
+    filter: brightness(0.95) contrast(1.1) saturate(1.2);
+    transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
+    cursor: pointer;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03) rotate(0.5deg);
 }
 
 .hero-section h1 {
@@ -800,13 +828,6 @@ footer {
 
 .right-top-lane img {
     display: block;
-}
-
-
-.hero-section {
-    position: relative;
-    overflow: hidden;
-    background-color: white;
 }
 
 .floating-shapes {
