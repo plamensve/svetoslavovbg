@@ -1,20 +1,14 @@
-const track = document.getElementById('carouselTrack');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-const slides = document.querySelectorAll('.gallery-item');
-let index = 0;
+let photos = document.querySelectorAll('.gallery-item');
 
-function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-}
+photos.forEach(photo => {
+    photo.addEventListener('click', function () {
+        photo.style.transform = 'scale(2)';
+        photo.style.zIndex = '10';
+        photo.style.transition = 'transform 0.3s ease';
+    });
 
-nextBtn.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
+    photo.addEventListener('mouseleave', function () {
+        photo.style.transform = 'scale(1)';
+        photo.style.zIndex = '1';
+    });
 });
-
-prevBtn.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateCarousel();
-});
-
