@@ -5,7 +5,7 @@ photos.forEach(photo => {
 
     photo.addEventListener('click', function () {
         if (!isZoomed) {
-            photo.style.transform = 'scale(2)';
+            photo.style.transform = 'scale(1.5)';
             photo.style.zIndex = '10';
         } else {
             photo.style.transform = 'scale(1)';
