@@ -306,6 +306,7 @@ details[open] summary::before {
 .logo {
     width: 100px;
     margin-right: 1em;
+    cursor: pointer;
 }
 
 /* === Navigation === */
@@ -367,6 +368,7 @@ details[open] summary::before {
 .hero-image{
     max-width: 800px;
     width: 100%;
+    padding-right: 30px;
 }
 
 
