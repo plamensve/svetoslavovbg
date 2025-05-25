@@ -159,7 +159,6 @@ details[open] summary::before {
 /* === General Containers === */
 .container {
     display: flex;
-
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -1074,3 +1073,152 @@ footer {
     font-size: 0.85rem;
 }
 
+/* Фон над карусела */
+#background {
+    width: 100%;
+    max-width: 1800px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 20px auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.5s ease-out;
+}
+
+/* Основната секция с фоново изображение */
+#gallery {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* ← ключовото */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#gallery .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* разстояние между h2 и #background */
+}
+
+
+/* Контейнер за фоновото изображение */
+
+#background {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    transition: 0.5s ease-out;
+    margin: 0 auto;
+}
+
+/* Карусел секция (под основната) */
+#gallery-carousel {
+    padding: 60px 0;
+}
+
+
+/* Контейнер на карусела */
+.carousel-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Основен карусел */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+/* Елемент в карусела */
+.carousel-item {
+    text-align: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center; /* ← центрира съдържанието вътре */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* Активна снимка */
+.carousel-item img.active {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Неактивни снимки */
+.carousel-item img.inactive {
+    opacity: 0.4;
+}
+
+/* Текст под снимката */
+.caption {
+    font-size: 14px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Контролни бутони */
+.controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    font-size: 24px;
+    padding: 6px 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #eee;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.controls button:hover {
+    background-color: #ccc;
+}
+
+/* Стил за скрол лентата в .carousel */
+.carousel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #f0f1c5; /* светъл фон */
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #3a7a7b; /* основен цвят */
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: #5fc1c2; /* при hover – акцентен цвят */
+}
